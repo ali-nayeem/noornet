@@ -1001,8 +1001,10 @@ extern "C" void draw_detections_cv_v3(mat_cv* mat, detection *dets, int num, flo
                 //cvSetImageROI(copy_img, rect);
                 //cvSaveImage(image_name, copy_img, 0);
                 //cvResetImageROI(copy_img);
-
-                cv::rectangle(*show_img, pt1, pt2, color, width, 8, 0);
+                if(class_id == 0)
+                    cv::rectangle(*show_img, pt1, pt2, color, CV_FILLED, 8, 0);
+                else
+                    cv::rectangle(*show_img, pt1, pt2, color, width, 8, 0);
                 if (ext_output)
                     printf("\t(left_x: %4.0f   top_y: %4.0f   width: %4.0f   height: %4.0f)\n",
                     (float)left, (float)top, b.w*show_img->cols, b.h*show_img->rows);
