@@ -9,8 +9,12 @@
 *.dll
 *.lib
 *.dylib
+*.mp4
+*.avi
+*.png
+Makefile
 mnist/
-data/
+data/obj/
 caffe/
 grasp/
 images/

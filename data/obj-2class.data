@@ -1,0 +1,5 @@
+classes = 2
+train  = data/train-2class.txt
+valid  = data/valid-2class.txt
+names = data/obj.names
+backup = backup-2class/
